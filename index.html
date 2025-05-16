@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLBB Complaint Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>MLBB Complaint Form</h1>
+        <p>Enter the details below to generate your complaint message.</p>
+
+        <label for="battleId">Battle ID:</label>
+        <input type="text" id="battleId" placeholder="e.g., 123456789012345">
+
+        <label for="battleDate">Date of Battle:</label>
+        <input type="date" id="battleDate">
+
+        <label for="battleTime">Time of Battle (approx.):</label>
+        <input type="time" id="battleTime">
+
+        <button id="generateBtn">Generate Complaint</button>
+
+        <div class="output-section" id="outputSection" style="display:none;">
+            <h2>Generated Complaints:</h2>
+
+            <div class="complaint-box">
+                <h3>Full Complaint:</h3>
+                <p id="fullComplaint"></p>
+                <button class="copy-btn" data-clipboard-target="#fullComplaint">Copy Full Complaint</button>
+                <span class="copy-feedback" aria-live="polite"></span>
+            </div>
+
+            <div class="complaint-box">
+                <h3>Short Note (Under 200 Characters):</h3>
+                <p id="shortComplaint"></p>
+                <button class="copy-btn" data-clipboard-target="#shortComplaint">Copy Short Note</button>
+                <span class="copy-feedback" aria-live="polite"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
